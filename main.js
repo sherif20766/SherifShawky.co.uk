@@ -31,7 +31,7 @@ $(window).scroll(function() {
 
 function myMap() {
 
-	let myCenter = new google.maps.LatLng(52.948121, -1.171632);
+	let myCenter = new google.maps.LatLng(52.942380, -1.188782);
 	let mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
 	let map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 	let marker = new google.maps.Marker({position:myCenter});

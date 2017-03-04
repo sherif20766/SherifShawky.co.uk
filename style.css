@@ -5,6 +5,9 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+body {
+  font-size: 16px;
+}
 
 /* ----------------------------------------------- */
 /* ----------------------------------------------- */
@@ -49,6 +52,7 @@
   position: relative;
   top: 25%;
 }
+#front h1{font-size: 4.5em}
 
 /* ----------------------------------------------- */
 
@@ -56,10 +60,18 @@
 
 #introduction{
   min-height: 50vh;
-  padding-top: 7.5vh 
+  padding-top: 7.5vh;
+  padding-bottom: 7.5vh; 
 }
 
+#introduction p, li{
+  text-align: left;
+  font-size: 1.25em;
+}
 
+#introduction ul{
+  padding-top: 2.5vh;
+}
 .col-md-4 h3{
   text-align: center;
 }
@@ -72,7 +84,7 @@
 /* ----------------------------------------------- */
 
 #portfolio{
-  background-color: #f6f6f6
+  background-color: #f6f6f6;
 }
 .thumbnail {
     padding: 0 0 15px 0;
@@ -80,9 +92,7 @@
     border-radius: 0;
 
 }
-.thumbnail:hover{
-      
-}
+
 .thumbnail img {
     width: 100%;
     height: 100%;
@@ -90,10 +100,17 @@
     -webkit-transition: all 0.5s ease-in-out 0s;
        -moz-transition: all 0.5s ease-in-out 0s;        
             transition: all 0.5s ease-in-out 0s;
+
+    filter: url(filters.svg#grayscale);
+    filter: gray;
+   -webkit-filter: grayscale(0.75);
+
 }
 
 .thumbnail img:hover{
   box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  filter: none;
+  -webkit-filter: none;
 }
 
 /* ----------------------------------------------- */
@@ -127,7 +144,7 @@ textarea {
  resize: vertical;
 }
 form button {
-  background-color: #000;
+  background-color: #262626;
   color: #fff;
   width: 50vw;
   height: 8vh;
